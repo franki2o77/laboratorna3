@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розрахункова форма</title>
+    <script>
+        function calculateWeight() {
+            const weight = document.getElementById("weight").value;
+            document.getElementById("weightOutput").value = "Ваша вага "{weight} кг;
+        }
+
+        function addNumbers() {
+            const num1 = parseFloat(document.getElementById("num1").value)  ;
+            const num2 = parseFloat(document.getElementById("num2").value)  ;
+            document.getElementById("addOutput").value = num1 + num2;
+        }
+
+        function updateRangeValue() {
+            const rangeValue = document.getElementById("range").value;
+            document.getElementById("rangeOutput").value = rangeValue;
+        }
+
+        function calculateSalary() {
+            const hours = parseFloat(document.getElementById("hours").value)  ;
+            const rate = parseFloat(document.getElementById("rate").value)  ;
+            const salary = hours * rate;
+            const tax = salary * 0.30;
+            const finalSalary = salary - tax;
+            document.getElementById("salaryOutput").value = finalSalary.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Розрахункова форма</h1>
+    
+    <!-- Ваша вага -->
+    <label for="weight">Ваша вага (кг):</label>
+    <input type="number" id="weight" oninput="calculateWeight()">
+    <output id="weightOutput"></output>
+    <hr>
+    
+    <!-- Калькулятор додавання -->
+    <h2>Калькулятор додавання двох чисел</h2>
+    <label for="num1">Число 1:</label>
+    <input type="number" id="num1" oninput="addNumbers()">
+    <br>
+    <label for="num2">Число 2:</label>
+    <input type="number" id="num2" oninput="addNumbers()">
+    <br>
+    <label>Результат:</label>
+    <output id="addOutput"></output>
+    <hr>
+    
+    <!-- Поточне значення range -->
+    <h2>Поточне значення тегу range</h2>
+    <label for="range">Виберіть значення:</label>
+    <input type="range" id="range" min="0" max="100" step="1" oninput="updateRangeValue()">
+    <output id="rangeOutput"></output>
+    <hr>
+    
+    <!-- Фінансовий калькулятор -->
+    <h2>Фінансовий калькулятор</h2>
+    <label for="hours">Кількість годин:</label>
+    <input type="number" id="hours" oninput="calculateSalary()">
+    <br>
+    <label for="rate">Погодинна ставка:</label>
+    <input type="number" id="rate" oninput="calculateSalary()">
+    <br>
+    <label>Кінцевий результат (з урахуванням податку):</label>
+    <output id="salaryOutput"></output>
+</body>
+</html>

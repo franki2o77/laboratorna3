@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регістрації</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="login">Логін:</label>
+        <input type="text" id="login" name="login" required><br><br>
+        
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="confirm-password">Повторіть пароль:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+        
+        <label>Стать:</label>
+        <input type="radio" id="male" name="gender" value="чоловік">
+        <label for="male">чоловік</label>
+        <input type="radio" id="female" name="gender" value="жінка">
+        <label for="female">жінка</label><br><br>
+        
+        <label for="city">Вкажіть місто:</label>
+        <select id="city" name="city">
+            <option value="Житомир">Житомир</option>
+            <option value="Київ">Київ</option>
+            <option value="Львів">Львів</option>
+        </select><br><br>
+        
+        <label>Інтереси:</label><br>
+        <input type="checkbox" id="football" name="interests" value="футбол">
+        <label for="football">футбол</label>
+        <input type="checkbox" id="chess" name="interests" value="шахи">
+        <label for="chess">шахи</label>
+        <input type="checkbox" id="drawing" name="interests" value="малювання">
+        <label for="drawing">малювання</label>
+        <input type="checkbox" id="music" name="interests" value="музика">
+        <label for="music">музика</label><br><br>
+        
+        <button type="reset">Очистити</button>
+        <button type="submit">Відправити</button>
+    </form>
+</body>
+</html>
